@@ -1,0 +1,6 @@
+.DS_STORE
+*.lock
+vendor
+logs
+cghooks.lock
+build

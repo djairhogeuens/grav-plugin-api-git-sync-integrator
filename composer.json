@@ -1,0 +1,29 @@
+{
+  "name": "djairhogeuens/api-git-sync-integrator",
+  "type": "grav-plugin",
+  "description": "An integration plugin to integrate Git Sync with Api",
+  "keywords": ["plugin"],
+  "homepage": "https://github.com/djairhogeuens/grav-plugin-api-git-sync-integrator",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Djairho Geuens",
+      "email": "Djairho.Geuens@ae.be",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": ">=7.1.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "Grav\\Plugin\\ApiGitSyncIntegrator\\": "classes/"
+    },
+    "classmap":  ["api-git-sync-integrator.php"]
+  },
+  "config": {
+    "platform": {
+      "php": "7.1.3"
+    }
+  }
+}

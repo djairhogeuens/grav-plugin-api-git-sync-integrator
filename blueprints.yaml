@@ -1,0 +1,40 @@
+name: Api Git Sync Integrator
+slug: api-git-sync-integrator
+type: plugin
+version: 1.0.0
+description: An integration plugin to integrate Git Sync with Api
+icon: plug
+author:
+  name: Djairho Geuens
+  email: Djairho.Geuens@ae.be
+homepage: https://github.com/djairhogeuens/grav-plugin-api-git-sync-integrator
+keywords: grav, plugin, api, git
+bugs: https://github.com/djairhogeuens/grav-plugin-api-git-sync-integrator/issues
+docs: https://github.com/djairhogeuens/grav-plugin-api-git-sync-integrator/blob/develop/README.md
+license: MIT
+
+dependencies:
+  - { name: grav, version: '>=1.6.0' }
+  - { name: api, version: '>=0.1.0'}
+  - { name: gitsync, version: '>=2.1.0'}
+
+form:
+  validation: strict
+  fields:
+    general:
+      type: section
+      title: General
+      text: Hover over the field labels to discover more information about the plugin's configuration setting.
+      underline: true
+
+    enabled:
+      type: toggle
+      label: Plugin Status
+      help: Enable, or disable, the API-Git Sync integrator plugin.
+      highlight: 1
+      default: 0
+      options:
+        1: Enabled
+        0: Disabled
+      validate:
+        type: bool
