@@ -125,7 +125,5 @@ class ApiGitSyncIntegratorPlugin extends Plugin
     private function fireGitSyncEvent()
     {
         $this->grav->fireEvent(self::EVENT_GIT_SYNC);
-        echo "Git Sync triggered";
-        exit();
     }
 }
