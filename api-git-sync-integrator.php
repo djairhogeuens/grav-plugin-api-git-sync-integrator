@@ -4,6 +4,7 @@ namespace Grav\Plugin;
 use Composer\Autoload\ClassLoader;
 use Grav\Common\Plugin;
 use RocketTheme\Toolbox\Event\Event;
+use GravApi\Config\Constants;
 
 /**
  * Class ApiGitSyncIntegratorPlugin
@@ -11,14 +12,6 @@ use RocketTheme\Toolbox\Event\Event;
  */
 class ApiGitSyncIntegratorPlugin extends Plugin
 {
-    
-    // Api events
-    const EVENT_ON_API_PAGE_CREATE = 'onApiPageCreate';
-    const EVENT_ON_API_PAGE_UPDATE = 'onApiPageUpdate';
-    const EVENT_ON_API_PAGE_DELETE = 'onApiPageDelete';
-    const EVENT_ON_API_USER_CREATE = 'onApiUserCreate';
-    const EVENT_ON_API_USER_UPDATE = 'onApiUserUpdate';
-    const EVENT_ON_API_USER_DELETE = 'onApiUserDelete';
 
     // Git Sync events
     const EVENT_GIT_SYNC = 'gitsync';
@@ -65,12 +58,12 @@ class ApiGitSyncIntegratorPlugin extends Plugin
 
         // Enable the main events we are interested in
         $this->enable([
-            self::EVENT_ON_API_PAGE_CREATE => ['onApiPageCreate', 0],
-            self::EVENT_ON_API_PAGE_UPDATE => ['onApiPageUpdate', 0],
-            self::EVENT_ON_API_PAGE_DELETE => ['onApiPageDelete', 0],
-            self::EVENT_ON_API_USER_CREATE => ['onApiUserCreate', 0],
-            self::EVENT_ON_API_USER_UPDATE => ['onApiUserUpdate', 0],
-            self::EVENT_ON_API_USER_DELETE => ['onApiUserDelete', 0]
+            Constants::EVENT_ON_API_PAGE_CREATE => ['onApiPageCreate', 0],
+            Constants::EVENT_ON_API_PAGE_UPDATE => ['onApiPageUpdate', 0],
+            Constants::EVENT_ON_API_PAGE_DELETE => ['onApiPageDelete', 0],
+            Constants::EVENT_ON_API_USER_CREATE => ['onApiUserCreate', 0],
+            Constants::EVENT_ON_API_USER_UPDATE => ['onApiUserUpdate', 0],
+            Constants::EVENT_ON_API_USER_DELETE => ['onApiUserDelete', 0]
         ]);
     }
 
